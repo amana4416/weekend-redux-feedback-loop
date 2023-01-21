@@ -1,4 +1,6 @@
-import React from 'react';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+import { useState, setState } from 'react';
 import './Feelings.css';
 
 //mui components
@@ -11,6 +13,12 @@ import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 
 function Feelings() {
+
+    const [rate, setRate] = useState(0);
+    
+
+   
+
     return (
         <>
              <Paper className="container"  sx={{backgroundColor: '#7B6D8D'}}>
@@ -21,11 +29,36 @@ function Feelings() {
                             aria-labelledby="demo-radio-buttons-group-label"
                             name="radio-buttons-group"
                         >
-                        <FormControlLabel sx={{color: '#2C1118', padding: '3px'}} value="1" control={<Radio />} label="1 - Atrocious" />
-                        <FormControlLabel sx={{color: '#2C1118', padding: '3px'}} value="2" control={<Radio />} label="2 - Not too great" />
-                        <FormControlLabel sx={{color: '#2C1118', padding: '3px'}} value="3" control={<Radio />} label="3 - Not bad, but could be better" />
-                        <FormControlLabel sx={{color: '#2C1118', padding: '3px'}} value="4" control={<Radio />} label="4 - Good" />
-                        <FormControlLabel sx={{color: '#2C1118', padding: '3px'}} value="5" control={<Radio />} label="5 - Best day ever!! ♡" />
+                        <FormControlLabel
+                            sx={{color: '#2C1118', padding: '3px'}} 
+                            value="1" control={<Radio />} 
+                            label="1 - Atrocious" 
+                            onChange={(event) => setRate(event.target.value)} 
+                        />
+                        <FormControlLabel 
+                            sx={{color: '#2C1118', padding: '3px'}} 
+                            value="2" control={<Radio />} 
+                            label="2 - Not too great" 
+                            onChange={(event) => setRate(event.target.value)} 
+                        />
+                        <FormControlLabel 
+                            sx={{color: '#2C1118', padding: '3px'}} 
+                            value="3" control={<Radio />} 
+                            label="3 - Not bad, but could be better" 
+                            onChange={(event) => setRate(event.target.value)} 
+                            />
+                        <FormControlLabel 
+                            sx={{color: '#2C1118', padding: '3px'}} 
+                            value="4" control={<Radio />} 
+                            label="4 - Good"
+                            onChange={(event) => setRate(event.target.value)}  
+                        />
+                        <FormControlLabel 
+                            sx={{color: '#2C1118', padding: '3px'}} 
+                            value="5" control={<Radio />} 
+                            label="5 - Best day ever!! ♡" 
+                            onChange={(event) => setRate(event.target.value)} 
+                        />
                     </RadioGroup>
                 </FormControl>
                 <div>
