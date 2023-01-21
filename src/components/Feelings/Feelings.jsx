@@ -15,16 +15,22 @@ import Button from '@mui/material/Button';
 function Feelings() {
 
     const [rate, setRate] = useState(0);
-    
+    const dispatch = useDispatch();
 
-   
+    const addFeelings = (event) => {
+        event.preventDefault();
+        dispatch({
+            type: 'ADD_FEELINGS',
+            payload: rate
+        })
+    }
 
     return (
         <>
              <Paper className="container"  sx={{backgroundColor: '#7B6D8D'}}>
                 <h3>How are you feeling today?</h3>
-                <FormControl>
-                    <FormLabel id="demo-radio-buttons-group-label" ></FormLabel>
+                <FormControl >
+                    <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
                         <RadioGroup
                             aria-labelledby="demo-radio-buttons-group-label"
                             name="radio-buttons-group"
@@ -62,7 +68,10 @@ function Feelings() {
                     </RadioGroup>
                 </FormControl>
                 <div>
-                    <Button sx={{backgroundColor: '#593F62', color: '#A5C4D4', marginTop: '25px'}}>
+                    <Button
+                        sx={{backgroundColor: '#593F62', color: '#A5C4D4', marginTop: '25px'}}
+                        onSubmit={addFeelings}
+                        >
                         Next
                     </Button>
                 </div>

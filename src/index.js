@@ -12,7 +12,16 @@ import logger from 'redux-logger';
 //feelings will be going into an object, so set the state to start off as an empty object
 //already have dummy data in the database, so we can leave the state as an empty array
 const feedbackAnswers = (state = {}, action) => {
-    return state;
+    //going to use a switch here because i think i'm going to end up only using one reducer? we'll see
+    //but if end up using only one reducer, i'll have 4 if statements and that's going to be hard to read/bulky
+    //a switch is in this case for better readability
+    switch (action.type) {
+        case 'ADD_FEELINGS':
+            return { ...state, feeling: action.payload };
+        
+        default:
+            return state;
+    }
 }
 
 //create store
