@@ -1,6 +1,6 @@
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
-import { useState, setState } from 'react';
+import { useState } from 'react';
 import './Support.css';
 
 //mui components
