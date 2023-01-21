@@ -1,7 +1,7 @@
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { useState, setState } from 'react';
-import './Feelings.css';
+import './Feelings.css'
 
 //mui components
 import Paper from '@mui/material/Paper';
@@ -27,7 +27,7 @@ function Feelings() {
 
     return (
         <>
-             <Paper className="container"  sx={{backgroundColor: '#7B6D8D'}}>
+             <Paper className="container"   sx={{backgroundColor: '#7B6D8D', height: '430px', width: '350px'}}>
                 <h3>How are you feeling today?</h3>
                 <FormControl >
                     <form>

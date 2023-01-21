@@ -27,7 +27,7 @@ function Support() {
 
     return (
         <>
-             <Paper className="container"  sx={{backgroundColor: '#7B6D8D'}}>
+             <Paper className="container"  sx={{backgroundColor: '#7B6D8D', height: '430px', width: '350px'}}>
                 <h3>How well are you being supported?</h3>
                 <FormControl >
                     <form>

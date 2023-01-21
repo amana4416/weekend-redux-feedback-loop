@@ -27,7 +27,7 @@ function Understanding() {
 
     return (
         <>
-             <Paper className="container"  sx={{backgroundColor: '#7B6D8D'}}>
+             <Paper className="container"   sx={{backgroundColor: '#7B6D8D', height: '430px', width: '350px'}}>
                 <h3>How well are you understanding the content?</h3>
                 <FormControl >
                     <form>
@@ -37,31 +37,31 @@ function Understanding() {
                             name="radio-buttons-group"
                         >
                             <FormControlLabel
-                                sx={{color: '#2C1118', padding: '3px'}} 
+                                sx={{color: '#2C1118', padding: '1px'}} 
                                 value="1" control={<Radio />} 
                                 label="1 - Understood nothing" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
-                                sx={{color: '#2C1118', padding: '3px'}} 
+                                sx={{color: '#2C1118', padding: '1px'}} 
                                 value="2" control={<Radio />} 
                                 label="2 - Understood a little" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
-                                sx={{color: '#2C1118', padding: '3px'}} 
+                                sx={{color: '#2C1118', padding: '1px'}} 
                                 value="3" control={<Radio />} 
                                 label="3 - Understood some things" 
                                 onChange={(event) => setRate(event.target.value)} 
                                 />
                             <FormControlLabel 
-                                sx={{color: '#2C1118', padding: '3px'}} 
+                                sx={{color: '#2C1118', padding: '1px'}} 
                                 value="4" control={<Radio />} 
                                 label="4 - Understood most things"
                                 onChange={(event) => setRate(event.target.value)}  
                             />
                             <FormControlLabel 
-                                sx={{color: '#2C1118', padding: '3px'}} 
+                                sx={{color: '#2C1118', padding: '1px'}} 
                                 value="5" control={<Radio />} 
                                 label="5 - Understood everything ♡" 
                                 onChange={(event) => setRate(event.target.value)} 
