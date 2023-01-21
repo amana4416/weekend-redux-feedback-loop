@@ -45,13 +45,13 @@ function Feelings() {
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="2" control={<Radio />} 
-                                label="2 - Not too great" 
+                                label="2 - Bad" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="3" control={<Radio />} 
-                                label="3 - Not bad, but could be better" 
+                                label="3 - OK" 
                                 onChange={(event) => setRate(event.target.value)} 
                                 />
                             <FormControlLabel 
@@ -63,7 +63,7 @@ function Feelings() {
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="5" control={<Radio />} 
-                                label="5 - Best day ever!! ♡" 
+                                label="5 - Marvelous ♡" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                         </RadioGroup>

@@ -39,31 +39,31 @@ function Support() {
                             <FormControlLabel
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="1" control={<Radio />} 
-                                label="1 - Woah I have a teacher?" 
+                                label="1 - Not supported at all" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="2" control={<Radio />} 
-                                label="2 - I " 
+                                label="2 - A little supported" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="3" control={<Radio />} 
-                                label="3 - I can ask my teacher questions" 
+                                label="3 - Somewhat supported" 
                                 onChange={(event) => setRate(event.target.value)} 
                                 />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="4" control={<Radio />} 
-                                label="4 - I can "
+                                label="4 - Well supported"
                                 onChange={(event) => setRate(event.target.value)}  
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="5" control={<Radio />} 
-                                label="5 - I know I  ♡" 
+                                label="5 - Extremely well suported ♡" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                         </RadioGroup>

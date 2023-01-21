@@ -39,31 +39,31 @@ function Understanding() {
                             <FormControlLabel
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="1" control={<Radio />} 
-                                label="1 - I have no idea what's going on" 
+                                label="1 - Understood nothing" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="2" control={<Radio />} 
-                                label="2 - Only a little lost" 
+                                label="2 - Understood a little" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="3" control={<Radio />} 
-                                label="3 - Starting to get it" 
+                                label="3 - Understood some things" 
                                 onChange={(event) => setRate(event.target.value)} 
                                 />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="4" control={<Radio />} 
-                                label="4 - I think I get it"
+                                label="4 - Understood most things"
                                 onChange={(event) => setRate(event.target.value)}  
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
                                 value="5" control={<Radio />} 
-                                label="5 - I understand everything ♡" 
+                                label="5 - Understood everything ♡" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                         </RadioGroup>
