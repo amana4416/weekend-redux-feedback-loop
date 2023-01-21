@@ -1,0 +1,19 @@
+body {
+    background-color: #8499B1;
+}
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #7B6D8D;
+    float: center;
+    height: 430px;
+    width: 350px;
+}
+
+h3 {
+    color: #2C1118;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
