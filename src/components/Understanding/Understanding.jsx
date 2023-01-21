@@ -72,7 +72,15 @@ function Understanding() {
                 <div>
                     <Button
                         variant="contained"
-                        sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
+                        sx={{ backgroundColor: '#A5C4D4', marginTop: '25px', marginRight: '12px'}}
+                    >
+                        <Link to="/">
+                            Back
+                        </Link>
+                    </Button>
+                    <Button
+                        variant="contained"
+                        sx={{ backgroundColor: '#A5C4D4', marginTop: '25px', marginLeft: '12px'}}
                         onClick={addUnderstanding}
                     >
                         <Link to="/support">

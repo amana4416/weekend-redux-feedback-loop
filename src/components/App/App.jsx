@@ -9,6 +9,7 @@ import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
+import Success from '../Success/Success.jsx';
 import Admin from '../Admin/Admin.jsx';
 
 function App() {
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route exact path="/review">
           <Review />
+        </Route>
+        <Route exact path="/success">
+          <Success />
         </Route>
         <Route exact path="/admin">
           <Admin />

@@ -58,12 +58,20 @@ function Review() {
                     </TableBody>
                 </Table>
                 <div>
+                <Button
+                        variant="contained"
+                        sx={{ backgroundColor: '#A5C4D4', marginTop: '25px', marginRight: '12px'}}
+                    >
+                        <Link to="/comments">
+                            Back
+                        </Link>
+                    </Button>
                     <Button
                         variant="contained"
-                        sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
+                        sx={{ backgroundColor: '#A5C4D4', marginTop: '25px', marginLeft: '12px'}}
                         onClick={submitFeedback}
                     >
-                        <Link to="/">
+                        <Link to="/success">
                             Submit
                         </Link>
                     </Button>
