@@ -1,5 +1,5 @@
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux'
+import { useSelector, useHistory } from 'react-redux'
 
 import axios from 'axios';
 import './Review.css'
@@ -18,7 +18,7 @@ function Review() {
 
     //getting the feedback object from the redux store that lives on index.jx
     const feedback = useSelector(store => store.feedbackAnswers)
-
+    
     //post request that will send our ratings and comments to the database
     const submitFeedback = () => {
         axios({

@@ -1,6 +1,7 @@
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { useState } from 'react';
+import swal from 'sweetalert'
 import './Feelings.css'
 
 //mui components
@@ -16,13 +17,27 @@ function Feelings() {
 
     const [rate, setRate] = useState(0);
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const addFeelings = (event) => {
         event.preventDefault();
-        dispatch({
-            type: 'ADD_FEELINGS',
-            payload: rate
-        })
+        //input validation, only allow user to continue on to next page if they've selected a rating
+        //will show sweet alert if user doesn't select
+        if (rate >= 1) {
+            dispatch({
+                type: 'ADD_FEELINGS',
+                payload: rate
+            })
+            history.push('/understanding');
+        } else {
+            swal({
+                title: "Did not select answer",
+                text: "Make sure to select an answer for your feedback!",
+                icon: "warning",
+                dangerMode: true,
+              })
+        }
+
     }
 
     return (
@@ -80,9 +95,7 @@ function Feelings() {
                         sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
                         onClick={addFeelings}
                     >
-                        <Link to="/understanding">
-                            Next
-                        </Link>
+                        Next
                     </Button>
                 </div>
              </Paper>

@@ -1,6 +1,7 @@
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { useState } from 'react';
+import swal from 'sweetalert'
 import './Understanding.css';
 
 //mui components
@@ -16,13 +17,26 @@ function Understanding() {
 
     const [rate, setRate] = useState(0);
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const addUnderstanding = (event) => {
         event.preventDefault();
-        dispatch({
-            type: 'ADD_UNDERSTANDING',
-            payload: rate
-        })
+        //input validation, only allow user to continue on to next page if they've selected a rating
+        //will show sweet alert if user doesn't select
+        if (rate >= 1) {
+            dispatch({
+                type: 'ADD_UNDERSTANDING',
+                payload: rate
+            })
+            history.push('/support');
+        } else {
+            swal({
+                title: "Did not select answer",
+                text: "Make sure to select an answer for your feedback!",
+                icon: "warning",
+                dangerMode: true,
+              })
+        }
     }
 
     return (
@@ -83,9 +97,7 @@ function Understanding() {
                         sx={{ backgroundColor: '#A5C4D4', marginTop: '25px', marginLeft: '12px'}}
                         onClick={addUnderstanding}
                     >
-                        <Link to="/support">
-                            Next
-                        </Link>
+                         Next
                     </Button>
                 </div>
              </Paper>
