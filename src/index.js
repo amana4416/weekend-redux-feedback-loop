@@ -18,7 +18,12 @@ const feedbackAnswers = (state = {}, action) => {
     switch (action.type) {
         case 'ADD_FEELINGS':
             return { ...state, feeling: action.payload };
-        
+        case 'ADD_UNDERSTANDING':
+            return { ...state, understanding: action.payload };
+        case 'ADD_SUPPORT':
+            return { ...state, support: action.payload };
+        case 'ADD_COMMENT':
+            return { ...state, comments: action.payload };
         default:
             return state;
     }
