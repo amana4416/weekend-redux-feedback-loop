@@ -18,6 +18,7 @@ function Support() {
     const dispatch = useDispatch();
 
     const addSupport = (event) => {
+        console.log(rate);
         event.preventDefault();
         dispatch({
             type: 'ADD_SUPPORT',
@@ -38,31 +39,36 @@ function Support() {
                         >
                             <FormControlLabel
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="1" control={<Radio />} 
+                                value="1" 
+                                control={<Radio />} 
                                 label="1 - Not supported at all" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="2" control={<Radio />} 
+                                value="2" 
+                                control={<Radio />} 
                                 label="2 - A little supported" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="3" control={<Radio />} 
+                                value="3" 
+                                control={<Radio />} 
                                 label="3 - Somewhat supported" 
                                 onChange={(event) => setRate(event.target.value)} 
                                 />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="4" control={<Radio />} 
+                                value="4" 
+                                control={<Radio />} 
                                 label="4 - Well supported"
                                 onChange={(event) => setRate(event.target.value)}  
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="5" control={<Radio />} 
+                                value="5" 
+                                control={<Radio />} 
                                 label="5 - Extremely well suported ♡" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
@@ -73,7 +79,7 @@ function Support() {
                     <Button
                         variant="contained"
                         sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
-                        onSubmit={addSupport}
+                        onClick={addSupport}
                     >
                         <Link to="/comments">
                             Next

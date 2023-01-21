@@ -30,14 +30,14 @@ function Comments() {
                     id="outlined-basic" 
                     label="Comments (optional)" 
                     variant="outlined"
+                    value={comment}
                     onChange={(event) => setComment(event.target.value)}
                 />
-
                 <div>
                     <Button
                         variant="contained"
                         sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
-                        onSubmit={addComments}
+                        onClick={addComments}
                     >
                         <Link to="/review">
                             Next

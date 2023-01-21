@@ -1,6 +1,7 @@
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { useState } from 'react';
+import axios from 'axios';
 import './Review.css'
 
 //mui components
@@ -18,9 +19,21 @@ function Review() {
     //getting the feedback object from the redux store that lives on index.jx
     const feedback = useSelector(store => store.feedbackAnswers)
 
+    //post request that will send our ratings and comments to the database
     const submitFeedback = () => {
-
+        axios({
+            method: 'POST',
+            url: '/feedback',
+            data: feedback
+        })
+            .then((response) => {
+               console.log('yo')
+            })
+            .catch((error) => {
+                console.log('something broke in submitFeedback post request', error);
+            })
     }
+    
 
     return (
         <>
@@ -48,7 +61,7 @@ function Review() {
                     <Button
                         variant="contained"
                         sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
-                        onSubmit={submitFeedback}
+                        onClick={submitFeedback}
                     >
                         <Link to="/">
                             Submit

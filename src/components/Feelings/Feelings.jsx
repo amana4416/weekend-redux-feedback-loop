@@ -38,31 +38,36 @@ function Feelings() {
                         >
                             <FormControlLabel
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="1" control={<Radio />} 
+                                value="1" 
+                                control={<Radio />} 
                                 label="1 - Atrocious" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="2" control={<Radio />} 
+                                value="2" 
+                                control={<Radio />} 
                                 label="2 - Bad" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="3" control={<Radio />} 
+                                value="3"
+                                control={<Radio />} 
                                 label="3 - OK" 
                                 onChange={(event) => setRate(event.target.value)} 
                                 />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="4" control={<Radio />} 
+                                value="4" 
+                                control={<Radio />} 
                                 label="4 - Good"
                                 onChange={(event) => setRate(event.target.value)}  
                             />
                             <FormControlLabel 
                                 sx={{color: '#2C1118', padding: '3px'}} 
-                                value="5" control={<Radio />} 
+                                value="5" 
+                                control={<Radio />} 
                                 label="5 - Marvelous ♡" 
                                 onChange={(event) => setRate(event.target.value)} 
                             />
@@ -73,7 +78,7 @@ function Feelings() {
                     <Button
                         variant="contained"
                         sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
-                        onSubmit={addFeelings}
+                        onClick={addFeelings}
                     >
                         <Link to="/understanding">
                             Next

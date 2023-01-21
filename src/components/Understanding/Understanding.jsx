@@ -73,7 +73,7 @@ function Understanding() {
                     <Button
                         variant="contained"
                         sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
-                        onSubmit={addUnderstanding}
+                        onClick={addUnderstanding}
                     >
                         <Link to="/support">
                             Next
