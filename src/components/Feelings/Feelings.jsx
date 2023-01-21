@@ -62,7 +62,7 @@ function Feelings() {
                     </RadioGroup>
                 </FormControl>
                 <div>
-                    <Button sx={{backgroundColor: '#593F62', marginTop: '25px'}}>
+                    <Button sx={{backgroundColor: '#593F62', color: '#A5C4D4', marginTop: '25px'}}>
                         Next
                     </Button>
                 </div>
