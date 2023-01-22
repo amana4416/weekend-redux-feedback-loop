@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
     let support = Number(feedback.support);
     let comments = feedback.comments;
     let sqlText = `
-        INSERT INTO "feedback" ("feeling","understanding","support","comments")
+        INSERT INTO "feedback" ("feeling", "understanding", "support", "comments")
             VALUES ($1,$2,$3,$4);
     `;
     let sqlValues = [feeling, understanding, support, comments];

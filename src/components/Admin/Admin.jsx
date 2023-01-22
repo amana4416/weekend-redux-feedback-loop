@@ -39,6 +39,7 @@ function Admin() {
         })
     }
 
+    //delete request
     const deleteFeedback = (id) => {
         //sweet alert before deleting!! User must confirm for delete to actually work
         swal({
@@ -72,7 +73,7 @@ function Admin() {
     
     return (
         <>
-            <Paper className="container" sx={{backgroundColor: '#7B6D8D', height: 'auto', width: '650px'}}>
+            <Paper className="container" sx={{backgroundColor: '#7B6D8D', height: 'auto', width: '650px', marginBottom: '60px'}}>
                 <h3>Most recent feedback:</h3>
                 <Table>
                     <TableHead x={{ minWidth: 650 }} sx={{color: '#2C1118'}} aria-label="simple table">
@@ -81,23 +82,18 @@ function Admin() {
                             <TableCell sx={{color: '#2C1118'}}>Understanding Rating</TableCell>
                             <TableCell sx={{color: '#2C1118'}}>Support Rating</TableCell>
                             <TableCell sx={{color: '#2C1118'}}>Comments</TableCell>
-                            <TableCell sx={{color: '#2C1118'}}>Flag for Review</TableCell>
                             <TableCell sx={{color: '#2C1118'}}>Delete</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {previousFeedback.map((feedback) => {
                             return (
-                                <TableRow key={feedback.id}>
+                                <TableRow key={feedback.id} className={feedback.flagged ? 'flagged': ''}>
                                     <TableCell sx={{color: '#2C1118'}}>{feedback.feeling}</TableCell>
                                     <TableCell sx={{color: '#2C1118'}}>{feedback.understanding}</TableCell>
                                     <TableCell sx={{color: '#2C1118'}}>{feedback.support}</TableCell>
                                     <TableCell sx={{color: '#2C1118'}}>{feedback.comments}</TableCell>
-                                    <TableCell>
-                                        <FlagIcon 
-                                        sx={{color: '#A5C4D4'}}
-                                        />
-                                    </TableCell>
+                                
                                     <TableCell>
                                         <DeleteForeverIcon 
                                             sx={{color: '#A5C4D4'}}
