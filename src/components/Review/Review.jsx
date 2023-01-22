@@ -25,12 +25,12 @@ function Review() {
             url: '/feedback',
             data: feedback
         })
-            .then((response) => {
-               console.log('yo')
-            })
-            .catch((error) => {
-                console.log('something broke in submitFeedback post request', error);
-            })
+        .then((response) => {
+            console.log('yo');
+        })
+        .catch((error) => {
+            console.log('something broke in submitFeedback post request', error);
+        })
     }
     
 

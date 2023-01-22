@@ -31,12 +31,13 @@ router.get('/', (req, res) => {
         SELECT * FROM "feedback"
             ORDER BY "id" DESC;
         `;
+        //order by "id" desc so the most recent feedback is at the top
     pool.query(sqlText)
-        .then((result) => {
-            res.send(result.rows);
+        .then((dbRes) => {
+            res.send(dbRes.rows);
         })
         .catch((error) => {
-            console.log('something brok in get /feedback', error);
+            console.log('something broke in get /feedback', error);
             res.sendStatus(500);
         })
 })
