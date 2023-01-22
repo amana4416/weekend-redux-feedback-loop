@@ -39,7 +39,36 @@ function Admin() {
         })
     }
 
-    
+    const deleteFeedback = (id) => {
+        //sweet alert before deleting!! User must confirm for delete to actually work
+        swal({
+            title: "Are you sure you want to delete?",
+            text: "Feedback is gone forever once deleted",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        //if confirmed delete, then continue on with axios delte request
+        .then((removeFeedback) => {
+            if (removeFeedback) {
+                axios({
+                    method: 'DELETE',
+                    url: `/feedback/${id}`
+                })
+                .then((response) => {
+                    swal("You deleted feedback", {
+                        icon: "success"})
+                     //call get function so page can be updated after deleting feedback from database
+                    getFeedback();
+                })
+               .catch((error) => {
+                console.log('something broke in deleteFeedback delete request', err);
+               })
+            } else {
+                swal("Phew! Nice save!");
+            }
+        })
+    }
     
     return (
         <>
@@ -72,6 +101,7 @@ function Admin() {
                                     <TableCell>
                                         <DeleteForeverIcon 
                                             sx={{color: '#A5C4D4'}}
+                                            onClick={() => {deleteFeedback(feedback.id)}}
                                         />
                                     </TableCell>
                                 </TableRow>
