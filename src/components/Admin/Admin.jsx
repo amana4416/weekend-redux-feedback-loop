@@ -38,6 +38,8 @@ function Admin() {
             console.log('something broke in getFeedback get request', error);
         })
     }
+
+    
     
     return (
         <>
@@ -71,7 +73,6 @@ function Admin() {
                                         <DeleteForeverIcon 
                                             sx={{color: '#A5C4D4'}}
                                         />
-                                       
                                     </TableCell>
                                 </TableRow>
                             )
