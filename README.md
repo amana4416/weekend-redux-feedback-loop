@@ -1,4 +1,3 @@
-![MIT LICENSE](https://img.shields.io/github/license/amana4416/the_marketplace.svg?style=flat-square)
 ![REPO SIZE](https://img.shields.io/github/repo-size/amana4416/weekend-redux-feedback-loop?style=flat-square)
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/amana4416/weekend-redux-feedback-loop?style=flat-square)
 ![FORKS](https://img.shields.io/github/forks/amana4416/weekend-redux-feedback-loop?style=social)
