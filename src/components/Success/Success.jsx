@@ -24,7 +24,7 @@ function Success () {
 
     return(
         <> 
-            <Paper className="container" sx={{backgroundColor: '#7B6D8D', height: '385px', width: '350px'}}>
+            <Paper className="container" sx={{backgroundColor: '#7B6D8D', height: '450px', width: '350px'}}>
                 <h3>Thank you!</h3>
                 <img src={dora}  />
             
@@ -36,6 +36,14 @@ function Success () {
                 >
                     <Link to="/">
                         Leave new feedback
+                    </Link>
+                </Button>
+                <Button
+                    variant="contained"
+                    sx={{ backgroundColor: '#A5C4D4', marginTop: '25px'}}
+                >
+                    <Link to="/admin">
+                        See previous feedback
                     </Link>
                 </Button>
             </div>
